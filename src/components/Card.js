@@ -13,7 +13,7 @@ const Card = ({day, index, unit}) =>  {
     return(
         <div className="card-container">
             <h3>{index === 0 ? 'Today' : formattedDate}</h3>
-            <div className="icon-container">{getIcon(day.weather)}</div>
+            <div className="icon-container">{day.weather && getIcon(day.weather)}</div>
             <p>{day.weather}</p>
             <p>{convertUnit(unit, day.temp2m.max)} {unitShortHand}</p>
             <p>{convertUnit(unit, day.temp2m.min)} {unitShortHand}</p>
